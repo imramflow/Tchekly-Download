@@ -200,7 +200,7 @@ A: Yes, but they share the same results folder.
 
 <div align="center">
   <br>
-  <p>Developed by <strong>Ramflow</strong></p>
+  <p>Developed by <strong><a href="https://github.com/imramflow">Ramflow</a></strong></p>
   <p>Built with Python · PyArmor · PyInstaller · pywebview · Flask</p>
   <br>
   <p>

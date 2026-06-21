@@ -270,6 +270,8 @@ footer .social a {
     transition: color 0.2s;
 }
 footer .social a:hover { color: var(--cyan); }
+.credit-link { color: var(--cyan); text-decoration: none; }
+.credit-link:hover { text-decoration: underline; opacity: 0.8; }
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -493,7 +495,7 @@ footer .social a:hover { color: var(--cyan); }
 </section>
 
 <footer>
-    <div>Developed by <strong>Ramflow</strong></div>
+    <div>Developed by <a href="https://github.com/imramflow" target="_blank" class="credit-link"><strong>Ramflow</strong></a></div>
     <p style="margin-top:8px;font-size:12px;">Built with Python &middot; PyArmor &middot; PyInstaller &middot; pywebview &middot; Flask</p>
     <div class="social">
         <a href="https://t.me/tcheklyy" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
