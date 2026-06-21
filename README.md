@@ -44,8 +44,6 @@
 | **Keyword Search** | Search inbox for specific keywords + save matches |
 | **Free Proxy Fetcher** | Built-in tool to fetch free proxies from 20+ sources |
 | **Dark Desktop UI** | Native frameless window with custom titlebar, glass effects |
-| **In-App Tabs** | Browse external links inside the app without leaving |
-| **Remote Config** | Banners, announcements, settings update without reinstalling |
 
 ---
 
