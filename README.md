@@ -45,30 +45,6 @@
 | **Free Proxy Fetcher** | Built-in tool to fetch free proxies from 20+ sources |
 | **Dark Desktop UI** | Native frameless window with custom titlebar, glass effects |
 
----
-
-## 🖼️ Screenshots
-
-<p align="center">
-  <img src="docs/screenshots/dashboard.png" width="400" alt="Dashboard">
-  <img src="docs/screenshots/check.png" width="400" alt="Check Emails">
-  <br>
-  <img src="docs/screenshots/intel.png" width="400" alt="Profile Intel">
-  <img src="docs/screenshots/license.png" width="400" alt="License">
-  <br>
-  <img src="docs/screenshots/clean.png" width="400" alt="Clean List">
-  <img src="docs/screenshots/settings.png" width="400" alt="Settings">
-  <br>
-  <img src="docs/screenshots/vault.png" width="400" alt="Vault">
-  <img src="docs/screenshots/hub.png" width="400" alt="Command Hub">
-  <br>
-  <img src="docs/screenshots/read.png" width="400" alt="Read Email">
-  <img src="docs/screenshots/results.png" width="400" alt="Results">
-  <br>
-  <img src="docs/screenshots/dob.png" width="400" alt="DOB Detection">
-</p>
-
----
 
 ## 🚀 Quick Start Guide
 
