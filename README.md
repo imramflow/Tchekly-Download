@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/imramflow/Tchekly/master/src/tchekly/web/static/img/logo.svg" width="80" alt="Tchekly Logo">
+  <img src="https://raw.githubusercontent.com/imramflow/Tchekly-Download/main/docs/logo.svg" width="80" alt="Tchekly Logo">
   <h1 align="center">⚡ Tchekly</h1>
   <p align="center"><strong>Email Checker & Management Tool — Windows Desktop App</strong></p>
   <p align="center">
