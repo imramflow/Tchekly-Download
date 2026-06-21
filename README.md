@@ -15,8 +15,7 @@
 
 | Version | Link | Size |
 |---------|------|------|
-| **Latest Build** | [⬇️ Download tchekly.exe](https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe) | ~50 MB |
-| All Releases | [View All Releases →](https://github.com/imramflow/Tchekly-Download/releases) | |
+| **Latest Build** | [⬇️ Download tchekly.exe](https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe) | ~50 MB |
 
 > 💡 **Note:** Windows might show SmartScreen warning — click **"More info" → "Run anyway"**. This is normal for unsigned apps.
 
@@ -205,8 +204,8 @@ A: Yes, but they share the same results folder.
   <p>Built with Python · PyArmor · PyInstaller · pywebview · Flask</p>
   <br>
   <p>
-    <a href="https://github.com/imramflow/Tchekly-Download/releases"><img src="https://img.shields.io/github/v/release/imramflow/Tchekly-Download?color=00d4ff&label=Latest&logo=github"></a>
-    <a href="https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe"><img src="https://img.shields.io/badge/Download-.exe-22c55e?logo=windows&logoColor=white"></a>
+    <a href="https://imramflow.github.io/Tchekly-Download/"><img src="https://img.shields.io/badge/Website-Visit-00d4ff?logo=github-pages&logoColor=white"></a>
+    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe"><img src="https://img.shields.io/badge/Download-.exe-22c55e?logo=windows&logoColor=white"></a>
   </p>
   <br>
 </div>
