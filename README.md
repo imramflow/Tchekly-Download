@@ -196,6 +196,12 @@ A: Yes, but they share the same results folder.
 
 ---
 
+---
+
+> **Tchekly** is proprietary software. All rights reserved © 2026 Ramflow.
+> You may download and use the compiled `.exe` for personal use only.
+> Redistribution, modification, or reverse engineering is prohibited.
+
 <div align="center">
   <br>
   <p>Developed by <strong><a href="https://github.com/imramflow">Ramflow</a></strong></p>
