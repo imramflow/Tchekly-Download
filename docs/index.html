@@ -137,6 +137,8 @@ nav .nav-links .dl-btn:hover { transform: translateY(-1px); box-shadow: 0 0 20px
     margin-top: 12px; font-size: 12px; color: var(--text-sec);
 }
 .hero .dl-sub a { color: var(--cyan); text-decoration: none; }
+.hero .dl-sub .download-count { display:inline-flex; align-items:center; gap:4px; vertical-align:middle; }
+.hero .dl-sub .download-count img { display:inline-block; }
 
 /* Section */
 section { padding: 80px 32px; max-width: 1200px; margin: 0 auto; }
@@ -317,7 +319,7 @@ footer .social a:hover { color: var(--cyan); }
         <i class="fas fa-download"></i> Download Latest Build
     </a>
     <div class="dl-sub">
-        ~25 MB &middot; Latest build
+        ~25 MB &middot; Latest build &middot; <span class="download-count"><img src="https://ramflow.goatcounter.com/counter?p=/download" alt="downloads" style="height:18px;vertical-align:middle;filter:brightness(0.9);"> downloads</span>
     </div>
 </section>
 
@@ -507,7 +509,7 @@ footer .social a:hover { color: var(--cyan); }
 <script>
 function trackDownload() {
     if (window.goatcounter) {
-        goatcounter.count({ path: 'download', event: true, title: 'Download .exe' });
+        goatcounter.count({ path: '/download', title: 'Download .exe' });
     }
 }
 </script>
