@@ -589,7 +589,11 @@ footer .social a:hover{color:var(--cyan)}
   <div class="carousel-container reveal">
     <div class="carousel-track" id="carouselTrack">
       <div class="carousel-slide">
-        <img src="screenshots/dashboard.jpg" alt="Dashboard" loading="lazy" onclick="openLightbox(0)">
+        <img src="screenshots/email-checker.jpg" alt="Email Checker" loading="lazy" onclick="openLightbox(0)">
+        <div class="carousel-caption">Email Checker <small>· Bulk email validation interface</small></div>
+      </div>
+      <div class="carousel-slide">
+        <img src="screenshots/dashboard.jpg" alt="Dashboard" loading="lazy" onclick="openLightbox(1)">
         <div class="carousel-caption">Dashboard <small>· Overview of all features</small></div>
       </div>
       <div class="carousel-slide">
@@ -981,6 +985,7 @@ function toggleMobile(){
   var tot=document.getElementById('lbTotal');
 
   var slidesData=[
+    {src:'screenshots/email-checker.jpg',title:'Email Checker',sub:'Bulk email validation interface'},
     {src:'screenshots/dashboard.jpg',title:'Dashboard',sub:'Overview of all features'},
     {src:'screenshots/intel.jpg',title:'Profile Intel',sub:'Extract personal data from inbox'},
     {src:'screenshots/command-hub.jpg',title:'Command Hub',sub:'Quick access to all tools'},
