@@ -35,14 +35,14 @@
 | Feature | Description |
 |---------|-------------|
 | **Email Validation** | Check IMAP credentials with proxy support (SOCKS4/5, HTTP) |
-| **Bulk Checker** | Validate thousands of emails with multi-threading + stop/resume |
-| **Clean List** | Deduplicate, format validation, remove invalid formats |
+| **Bulk Checker** | Validate thousands of emails with multi-threading + pause/resume/stop |
 | **Read Emails** | Preview last 10 emails from any inbox |
 | **DOB Detection** | Extract date of birth from email headers & content |
 | **Profile Intel** | Extract name, phone, address, social accounts, financial data |
 | **SMTP Detect** | Auto-detect SMTP settings per email domain |
 | **Keyword Search** | Search inbox for specific keywords + save matches |
 | **Free Proxy Fetcher** | Built-in tool to fetch free proxies from 20+ sources |
+| **Pro Settings** | Configurable performance, filters, network, notifications & security |
 | **Dark Desktop UI** | Native frameless window with custom titlebar, glass effects |
 
 
@@ -67,16 +67,6 @@ Step 5: Click "Start Checking"
 Results save automatically to:
   → results/good_emails/valid_emails.txt
   → results/keyword_matches/matches.txt
-```
-
-### 🧹 How to Clean a List
-
-```
-Step 1: Click "Clean List" from the sidebar
-Step 2: Upload your email list file
-Step 3: Choose options (remove duplicates, validate format)
-Step 4: Click "Clean"
-Step 5: Download the cleaned result file
 ```
 
 ### 📨 How to Read Emails
@@ -155,22 +145,20 @@ All results are saved in the `results/` folder (next to the .exe):
 | **Data collection** | ❌ None — the app does not phone home |
 | **Processing** | 💻 100% local — nothing leaves your machine |
 | **Logging** | 📝 Email addresses only — passwords never logged |
-| **Permissions** | 🔐 `results/` = `700`, files = `600` |
 | **Network** | 🚫 Web GUI binds to `127.0.0.1` only (localhost) |
-| **Remote config** | 🌐 Fetches banners/config from GitHub only (no tracking) |
 
 ---
 
 ## ❓ FAQ
 
 **Q: Does it work on Linux or Mac?**
-A: No. This is a Windows-only desktop application (pywebview frameless window).
+A: No. This is a Windows-only desktop application.
 
 **Q: Can I use it offline?**
 A: Some features work offline (cleaning lists, formatting). Email checking requires internet.
 
 **Q: Why does SmartScreen block the .exe?**
-A: The .exe uses PyArmor obfuscation + PyInstaller bundling. It's not code-signed. Click **"More info" → "Run anyway"** — it's safe.
+A: The app is not code-signed. Click **"More info" → "Run anyway"** — it's safe.
 
 **Q: How do I update?**
 A: Just download the latest `.exe` and replace your old one. Your license and config are preserved.
@@ -204,7 +192,7 @@ A: Yes, but they share the same results folder.
 <div align="center">
   <br>
   <p>Developed by <strong><a href="https://github.com/imramflow">Ramflow</a></strong></p>
-  <p>Built with Python · PyArmor · PyInstaller · pywebview · Flask</p>
+
   <br>
   <p>
     <a href="https://imramflow.github.io/Tchekly-Download/"><img src="https://img.shields.io/badge/Website-Visit-00d4ff?logo=github-pages&logoColor=white"></a>

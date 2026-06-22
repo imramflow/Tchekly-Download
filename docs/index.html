@@ -8,6 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script data-goatcounter="https://tchekly.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -298,7 +299,7 @@ footer .social a:hover { color: var(--cyan); }
         <a href="#features">Features</a>
         <a href="#guide">Guide</a>
         <a href="#faq">FAQ</a>
-        <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-btn"><i class="fas fa-download"></i> Download</a>
+        <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-btn" onclick="trackDownload()"><i class="fas fa-download"></i> Download</a>
     </div>
 </nav>
 
@@ -308,11 +309,11 @@ footer .social a:hover { color: var(--cyan); }
     <p>Professional email validation and intelligence tool for Windows. Native desktop app with modern dark UI.</p>
     <div class="hero-badges">
         <span class="hero-badge"><i class="fas fa-windows"></i> Windows 10/11</span>
-        <span class="hero-badge"><i class="fas fa-shield-alt"></i> PyArmor Protected</span>
+        <span class="hero-badge"><i class="fas fa-shield-alt"></i> Secure &nbsp;Private</span>
         <span class="hero-badge"><i class="fas fa-bolt"></i> Multi-Threading</span>
         <span class="hero-badge"><i class="fas fa-globe"></i> Proxy Support</span>
     </div>
-    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-main">
+    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-main" onclick="trackDownload()">
         <i class="fas fa-download"></i> Download Latest Build
     </a>
     <div class="dl-sub">
@@ -381,11 +382,6 @@ footer .social a:hover { color: var(--cyan); }
             <p>Check IMAP credentials with multi-threading. Supports SOCKS4/5 and HTTP proxies.</p>
         </div>
         <div class="feature-card">
-            <div class="icon" style="background:rgba(167,139,250,0.1);color:var(--purple)"><i class="fas fa-broom"></i></div>
-            <h3>Clean & Format</h3>
-            <p>Remove duplicates, validate email format, and prepare clean lists for checking.</p>
-        </div>
-        <div class="feature-card">
             <div class="icon" style="background:rgba(34,197,94,0.1);color:var(--green)"><i class="fas fa-brain"></i></div>
             <h3>Profile Intel</h3>
             <p>Extract names, phone numbers, addresses, social media accounts, and financial data.</p>
@@ -411,9 +407,19 @@ footer .social a:hover { color: var(--cyan); }
             <p>Built-in free proxy fetcher from 20+ sources. Supports SOCKS4/5 and HTTP.</p>
         </div>
         <div class="feature-card">
-            <div class="icon" style="background:rgba(244,114,182,0.1);color:var(--pink)"><i class="fas fa-shield-alt"></i></div>
-            <h3>Secure & Private</h3>
-            <p>100% local processing. No data collection. All results encrypted with restricted permissions.</p>
+            <div class="icon" style="background:rgba(244,114,182,0.1);color:var(--pink)"><i class="fas fa-cog"></i></div>
+            <h3>Pro Settings</h3>
+            <p>Configure performance, filters, network, notifications & more. Full control over the tool.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon" style="background:rgba(0,212,255,0.1);color:var(--cyan)"><i class="fas fa-volume-up"></i></div>
+            <h3>Sound & Alerts</h3>
+            <p>Sound on valid email found, desktop notifications when checks complete, auto-save to vault.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon" style="background:rgba(167,139,250,0.1);color:var(--purple)"><i class="fas fa-download"></i></div>
+            <h3>Auto Update</h3>
+            <p>Get notified in-app when a new version is available. One-click download to stay current.</p>
         </div>
     </div>
 </section>
@@ -469,7 +475,7 @@ footer .social a:hover { color: var(--cyan); }
         </details>
         <details>
             <summary>Why does SmartScreen block the .exe?</summary>
-            <div class="faq-body">The app uses PyArmor obfuscation and is not code-signed. Click <strong>"More info" → "Run anyway"</strong> to proceed. The app is safe — it runs 100% locally with no data collection.</div>
+            <div class="faq-body">The app is not code-signed. Click <strong>"More info" → "Run anyway"</strong> to proceed. The app is safe — it runs 100% locally with no data collection.</div>
         </details>
         <details>
             <summary>Is my data safe?</summary>
@@ -492,12 +498,18 @@ footer .social a:hover { color: var(--cyan); }
 
 <footer>
     <div>Developed by <a href="https://github.com/imramflow" target="_blank" class="credit-link"><strong>Ramflow</strong></a></div>
-    <p style="margin-top:8px;font-size:12px;">Built with Python &middot; PyArmor &middot; PyInstaller &middot; pywebview &middot; Flask</p>
     <div class="social">
         <a href="https://t.me/tcheklyy" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
         <a href="https://github.com/imramflow/Tchekly-Download" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
     </div>
 </footer>
 
+<script>
+function trackDownload() {
+    if (window.goatcounter) {
+        goatcounter.count({ path: 'download', event: true, title: 'Download .exe' });
+    }
+}
+</script>
 </body>
 </html>
