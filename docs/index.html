@@ -513,15 +513,19 @@ function trackDownload() {
 }
 
 (function() {
-    var x = new XMLHttpRequest();
-    x.addEventListener('load', function() {
-        try {
-            var d = JSON.parse(this.responseText);
-            if (d && d.count) document.getElementById('downloadCount').textContent = d.count;
-        } catch(e) {}
-    });
-    x.open('GET', 'https://ramflow.goatcounter.com/counter//download.json');
-    x.send();
+    fetch('https://ramflow.goatcounter.com/api/v0/stats/hits', {
+        headers: {'Authorization': 'Bearer dgiy9r7c4y9c1fqnorsan6ptp1vmuvfjjkc1g8smqd2j54lwvp'}
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+        for (var i = 0; i < data.length; i++) {
+            if (data[i].path === '/download') {
+                document.getElementById('downloadCount').textContent = data[i].count;
+                break;
+            }
+        }
+    })
+    .catch(function() {});
 })();
 </script>
 </body>
