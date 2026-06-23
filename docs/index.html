@@ -807,14 +807,14 @@ footer .social a:hover{color:var(--cyan)}
 /* ─── Download Tracking ─── */
 function trackDownload(e, el){
   if(e) e.preventDefault();
-  if(window.goatcounter) goatcounter.count({path:'/download',title:'Download .exe',event:true});
+  if(window.goatcounter) goatcounter.count({path:'/download',title:'Download .exe'});
   setTimeout(function(){ window.location.href = el.href; }, 400);
   return false;
 }
 
 function trackDownloadAPK(e, el){
   if(e) e.preventDefault();
-  if(window.goatcounter) goatcounter.count({path:'/download-apk',title:'Download .apk',event:true});
+  if(window.goatcounter) goatcounter.count({path:'/download-apk',title:'Download .apk'});
   setTimeout(function(){ window.location.href = el.href; }, 400);
   return false;
 }
@@ -835,11 +835,12 @@ function trackDownloadAPK(e, el){
     return r.json();
   })
   .then(function(data){
+    var hits = data.hits || [];
     var total=0, dlCount=0;
-    for(var i=0;i<data.length;i++){
-      if(data[i].path==='/download'){ dlCount=data[i].count||0; total+=dlCount; }
-      else if(data[i].path==='/download-apk') total+=data[i].count||0;
-      else if(data[i].count) total+=data[i].count;
+    for(var i=0;i<hits.length;i++){
+      if(hits[i].path==='/download'){ dlCount=hits[i].count||0; total+=dlCount; }
+      else if(hits[i].path==='/download-apk') total+=hits[i].count||0;
+      else if(hits[i].count) total+=hits[i].count;
     }
     dlEl.textContent=dlCount;
     if(totalEl) totalEl.textContent=total;
