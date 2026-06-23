@@ -20,7 +20,7 @@
   },
   "update": {
     "latest_version": "1.2.3",
-    "download_url": "https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe",
+    "download_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe",
     "changelog": "What's new in 1.2.3:\n- WhatsApp support added (header, footer, license)\n- New analytics dashboard with live stats\n- Bug fixes & improvements",
     "force_update": false
   },
