@@ -471,7 +471,7 @@ footer .social a:hover{color:var(--cyan)}
     <a href="#guide">Guide</a>
     <a href="#faq">FAQ</a>
     <a href="#changelog">Updates</a>
-    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-btn" onclick="return trackDownload(event, this)"><i class="fas fa-download"></i> Download</a>
+    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-btn"><i class="fas fa-download"></i> Download</a>
   </div>
 </nav>
 
@@ -490,10 +490,10 @@ footer .social a:hover{color:var(--cyan)}
     <span><i class="fas fa-brain"></i> Profile Intel</span>
   </div>
   <div class="hero-actions">
-    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-main" onclick="return trackDownload(event, this)">
+    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-main">
       <i class="fab fa-windows"></i> Download for Windows
     </a>
-    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/Tchekly.apk" class="dl-secondary" onclick="return trackDownloadAPK(event, this)">
+    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/Tchekly.apk" class="dl-secondary">
       <i class="fab fa-android"></i> Download for Android
     </a>
     <a href="https://t.me/tcheklyy" target="_blank" class="dl-secondary">
@@ -505,7 +505,7 @@ footer .social a:hover{color:var(--cyan)}
     <span>·</span>
     <span>Latest build</span>
     <span>·</span>
-    <span><span class="num" id="downloadCount">0</span> downloads</span>
+    <span>Free to download</span>
   </div>
 </section>
 
@@ -514,10 +514,6 @@ footer .social a:hover{color:var(--cyan)}
   <div class="stat">
     <div class="stat-num">3-Day</div>
     <div class="stat-label">Free Trial</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num" id="totalCount">0</div>
-    <div class="stat-label">Total Downloads</div>
   </div>
   <div class="stat">
     <div class="stat-num">IMAP</div>
@@ -804,53 +800,6 @@ footer .social a:hover{color:var(--cyan)}
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
 
 <script>
-/* ─── Download Tracking ─── */
-function trackDownload(e, el){
-  if(e) e.preventDefault();
-  if(window.goatcounter) goatcounter.count({path:'/download',title:'Download .exe'});
-  setTimeout(function(){ window.location.href = el.href; }, 400);
-  return false;
-}
-
-function trackDownloadAPK(e, el){
-  if(e) e.preventDefault();
-  if(window.goatcounter) goatcounter.count({path:'/download-apk',title:'Download .apk'});
-  setTimeout(function(){ window.location.href = el.href; }, 400);
-  return false;
-}
-
-/* ─── Download Count ─── */
-(function(){
-  var dlEl=document.getElementById('downloadCount');
-  var totalEl=document.getElementById('totalCount');
-  if(!dlEl)return;
-  dlEl.textContent='...';
-  if(totalEl) totalEl.textContent='...';
-
-  fetch('https://ramflow.goatcounter.com/api/v0/stats/hits',{
-    headers:{'Authorization':'Bearer dgiy9r7c4y9c1fqnorsan6ptp1vmuvfjjkc1g8smqd2j54lwvp'}
-  })
-  .then(function(r){
-    if(!r.ok) throw new Error('HTTP '+r.status);
-    return r.json();
-  })
-  .then(function(data){
-    var hits = data.hits || [];
-    var total=0, dlCount=0;
-    for(var i=0;i<hits.length;i++){
-      if(hits[i].path==='/download'){ dlCount=hits[i].count||0; total+=dlCount; }
-      else if(hits[i].path==='/download-apk') total+=hits[i].count||0;
-      else if(hits[i].count) total+=hits[i].count;
-    }
-    dlEl.textContent=dlCount;
-    if(totalEl) totalEl.textContent=total;
-  })
-  .catch(function(){
-    dlEl.textContent='?';
-    if(totalEl) totalEl.textContent='?';
-  });
-})();
-
 /* ─── Mobile Toggle ─── */
 function toggleMobile(){
   document.getElementById('navLinks').classList.toggle('open');
