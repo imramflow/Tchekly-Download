@@ -213,6 +213,15 @@ nav .logo-text span{background:linear-gradient(135deg,var(--cyan),var(--purple))
   background:rgba(255,255,255,0.02);
 }
 .hero .dl-secondary:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
+.hero .dl-star{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:15px 26px;border-radius:var(--radius);
+  color:#fbbf24;font-size:14px;font-weight:600;text-decoration:none;
+  border:1px solid rgba(251,191,36,0.2);transition:all var(--transition);
+  background:rgba(251,191,36,0.06);
+}
+.hero .dl-star:hover{border-color:rgba(251,191,36,0.4);color:#fbbf24;transform:translateY(-2px);box-shadow:0 4px 20px rgba(251,191,36,0.12)}
+.hero .dl-star .count{color:rgba(251,191,36,0.6);font-weight:400;font-size:13px}
 .hero-meta{
   margin-top:20px;display:flex;gap:20px;
   font-size:13px;color:var(--text-dim);
@@ -518,6 +527,10 @@ footer .social a:hover{color:var(--cyan)}
     <a href="https://wa.me/213652731464" target="_blank" class="dl-secondary" style="background:rgba(37,211,102,0.1);border-color:rgba(37,211,102,0.25);color:#25D366;">
       <i class="fab fa-whatsapp"></i> WhatsApp
     </a>
+    <a href="https://github.com/imramflow/Tchekly-Download" target="_blank" class="dl-star" id="starBtn">
+      <i class="fab fa-github"></i> Star on GitHub
+      <span class="count">★ <span id="starCount">--</span></span>
+    </a>
   </div>
   <div class="hero-meta">
     <span>~25 MB (Win) · ~48 MB (Android)</span>
@@ -541,6 +554,10 @@ footer .social a:hover{color:var(--cyan)}
   <div class="stat">
     <div class="stat-num">v1.2.3</div>
     <div class="stat-label">Latest Version</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">★ <span id="starsStat">--</span></div>
+    <div class="stat-label">GitHub Stars</div>
   </div>
 </div>
 
@@ -1056,6 +1073,16 @@ function toggleMobile(){
     if(e.target===lb)closeLightbox();
   });
 })();
+
+/* GitHub Stars */
+fetch('https://api.github.com/repos/imramflow/Tchekly-Download').then(function(r){return r.json()}).then(function(d){
+  var c=d.stargazers_count||0;
+  document.getElementById('starCount').textContent=c;
+  document.getElementById('starsStat').textContent=c;
+}).catch(function(){
+  document.getElementById('starCount').textContent='0';
+  document.getElementById('starsStat').textContent='0';
+});
 </script>
 </body>
 </html>
