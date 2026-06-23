@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tchekly — Email Checker & Intelligence Tool</title>
-<meta name="description" content="Tchekly - Professional email validation and intelligence tool for Windows. Download the latest build.">
+<meta name="description" content="Tchekly - Professional email validation and intelligence tool for Windows & Android. Download the latest build.">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -357,7 +357,7 @@ section{padding:100px 32px;max-width:1100px;margin:0 auto;position:relative;z-in
 .cl-body li{margin-bottom:2px}
 
 /* ─── Requirements ─── */
-.req-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:700px;margin:0 auto}
+.req-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;max-width:860px;margin:0 auto}
 .req-card{padding:20px 18px;text-align:center}
 .req-card i{font-size:20px;margin-bottom:8px;display:block}
 .req-card .label{font-size:11px;color:var(--text-dim);margin-bottom:2px}
@@ -431,7 +431,7 @@ footer .social a:hover{color:var(--cyan)}
   .nav-links .dl-btn{text-align:center;margin-left:0;margin-top:8px}
   .hero h1{font-size:34px}
   .hero .tagline{font-size:15px}
-  .hero .dl-secondary{display:none}
+  /* .hero .dl-secondary{display:none} -- show on mobile for Android btn */
   .hero-meta{gap:12px;flex-wrap:wrap;justify-content:center}
   .stats-bar{gap:28px;padding:20px;margin:-30px 16px 0}
   .stats-bar .stat-num{font-size:22px}
@@ -479,10 +479,11 @@ footer .social a:hover{color:var(--cyan)}
 <section class="hero">
   <div class="hero-badge"><i class="fas fa-bolt"></i> v1.1.1 — Latest Build</div>
   <h1><span class="grad">Tchekly</span></h1>
-  <p class="tagline">Professional email validation &amp; intelligence tool for Windows.</p>
-  <p class="sub-text">Native desktop app · Dark UI · Multi-threaded · Proxy-ready</p>
+  <p class="tagline">Professional email validation &amp; intelligence tool for Windows &amp; Android.</p>
+  <p class="sub-text">Native desktop app · Android APK · Dark UI · Multi-threaded · Proxy-ready</p>
   <div class="hero-badges">
     <span><i class="fab fa-windows"></i> Windows 10/11</span>
+    <span><i class="fab fa-android"></i> Android 8+</span>
     <span><i class="fas fa-shield-alt"></i> Secure &amp; Private</span>
     <span><i class="fas fa-bolt"></i> Multi-Threaded</span>
     <span><i class="fas fa-globe"></i> Proxy Support</span>
@@ -490,14 +491,17 @@ footer .social a:hover{color:var(--cyan)}
   </div>
   <div class="hero-actions">
     <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-main" onclick="trackDownload()">
-      <i class="fas fa-download"></i> Download Latest
+      <i class="fab fa-windows"></i> Download for Windows
+    </a>
+    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/Tchekly.apk" class="dl-secondary" onclick="trackDownloadAPK()">
+      <i class="fab fa-android"></i> Download for Android
     </a>
     <a href="https://t.me/tcheklyy" target="_blank" class="dl-secondary">
       <i class="fab fa-telegram"></i> Telegram
     </a>
   </div>
   <div class="hero-meta">
-    <span>~25 MB</span>
+    <span>~25 MB (Win) · ~48 MB (Android)</span>
     <span>·</span>
     <span>Latest build</span>
     <span>·</span>
@@ -647,7 +651,8 @@ footer .social a:hover{color:var(--cyan)}
       <div class="num">1</div>
       <div class="body">
         <h3>Download</h3>
-        <p>Save <code>tchekly.exe</code> to your PC. Windows may show SmartScreen — click <strong>"More info → Run anyway"</strong>.</p>
+        <p><strong>Windows</strong> — Save <code>tchekly.exe</code> to your PC. SmartScreen may appear — click <strong>"More info → Run anyway"</strong>.</p>
+        <p><strong>Android</strong> — Download <code>Tchekly.apk</code> and open it. Enable <strong>"Install from Unknown Sources"</strong> if prompted.</p>
       </div>
     </div>
     <div class="guide-step reveal">
@@ -715,6 +720,11 @@ footer .social a:hover{color:var(--cyan)}
       <div class="label">Disk Space</div>
       <div class="val">~25 MB</div>
     </div>
+    <div class="card req-card reveal">
+      <i class="fab fa-android" style="color:var(--green)"></i>
+      <div class="label">Operating System</div>
+      <div class="val">Android 8+ (API 26+)</div>
+    </div>
   </div>
 </section>
 
@@ -727,7 +737,7 @@ footer .social a:hover{color:var(--cyan)}
   <div class="cl-item card reveal">
     <span class="cl-badge">v1.1.1</span>
     <div class="cl-body">
-      <strong>Update toast notification</strong> — Changed banner to a small toast notification. Fixed PyArmor variable shadowing bug. Added GoatCounter download tracking.
+      <strong>Android support + update toast</strong> — Now available for Android 8+ devices. Changed update banner to toast notification. Added GoatCounter download tracking.
     </div>
   </div>
   <div class="cl-item card reveal">
@@ -751,8 +761,8 @@ footer .social a:hover{color:var(--cyan)}
     <p>Common questions answered</p>
   </div>
   <details class="card reveal">
-    <summary>Does Tchekly work on Linux or Mac?</summary>
-    <div class="faq-body">No. Tchekly is a Windows-only desktop application built with pywebview (native WebView2 window). It requires Windows 10 or 11 (64-bit).</div>
+    <summary>Does Tchekly work on Linux, Mac, or Android?</summary>
+    <div class="faq-body">Tchekly runs on Windows 10/11 (64-bit) and <strong>Android 8+</strong>. Linux and Mac are not supported.</div>
   </details>
   <details class="card reveal">
     <summary>Why does SmartScreen block the .exe?</summary>
@@ -791,6 +801,10 @@ footer .social a:hover{color:var(--cyan)}
 /* ─── Download Tracking ─── */
 function trackDownload(){
   if(window.goatcounter) goatcounter.count({path:'/download',title:'Download .exe'});
+}
+
+function trackDownloadAPK(){
+  if(window.goatcounter) goatcounter.count({path:'/download-apk',title:'Download .apk'});
 }
 
 /* ─── Download Count ─── */

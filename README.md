@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/imramflow/Tchekly-Download/main/docs/logo.svg" width="80" alt="Tchekly Logo">
   <h1 align="center">⚡ Tchekly</h1>
-  <p align="center"><strong>Email Checker & Management Tool — Windows Desktop App</strong></p>
+  <p align="center"><strong>Email Checker & Management Tool — Windows & Android App</strong></p>
   <p align="center">
     <a href="#-download"><img src="https://img.shields.io/badge/Download-Latest%20Build-00d4ff?style=for-the-badge&logo=windows&logoColor=white"></a>
     <a href="#-features"><img src="https://img.shields.io/badge/Features-Overview-a78bfa?style=for-the-badge"></a>
@@ -15,7 +15,8 @@
 
 | Version | Link | Size |
 |---------|------|------|
-| **Latest Build** | [⬇️ Download tchekly.exe](https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe) | ~50 MB |
+| **Windows** | [⬇️ Download tchekly.exe](https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe) | ~50 MB |
+| **Android** | [⬇️ Download Tchekly.apk](https://github.com/imramflow/Tchekly-Download/raw/main/download/Tchekly.apk) | ~48 MB |
 
 > 💡 **Note:** Windows might show SmartScreen warning — click **"More info" → "Run anyway"**. This is normal for unsigned apps.
 
@@ -23,10 +24,8 @@
 
 | Component | Requirement |
 |-----------|-------------|
-| OS | Windows 10 / Windows 11 (64-bit) |
-| RAM | 2 GB minimum |
-| Storage | 200 MB free |
-| WebView2 | Auto-installs if missing (requires internet) |
+| **Windows** | Windows 10/11 (64-bit), 2 GB RAM, 200 MB free |
+| **Android** | Android 8+ (API 26+), arm64-v8a, 100 MB free |
 
 ---
 
@@ -151,8 +150,8 @@ All results are saved in the `results/` folder (next to the .exe):
 
 ## ❓ FAQ
 
-**Q: Does it work on Linux or Mac?**
-A: No. This is a Windows-only desktop application.
+**Q: Does it work on Linux, Mac, or Android?**
+A: Tchekly runs on Windows 10/11 (64-bit) and **Android 8+**. Linux and Mac are not supported.
 
 **Q: Can I use it offline?**
 A: Some features work offline (cleaning lists, formatting). Email checking requires internet.
@@ -197,6 +196,7 @@ A: Yes, but they share the same results folder.
   <p>
     <a href="https://imramflow.github.io/Tchekly-Download/"><img src="https://img.shields.io/badge/Website-Visit-00d4ff?logo=github-pages&logoColor=white"></a>
     <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe"><img src="https://img.shields.io/badge/Download-.exe-22c55e?logo=windows&logoColor=white"></a>
+    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/Tchekly.apk"><img src="https://img.shields.io/badge/Download-.apk-22c55e?logo=android&logoColor=white"></a>
   </p>
   <br>
 </div>
