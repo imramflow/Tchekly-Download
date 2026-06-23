@@ -1,5 +1,6 @@
 {
   "telegram_url": "https://t.me/tcheklyy",
+  "whatsapp_url": "https://wa.me/213652731464",
   "announcement": "",
   "app_version": "1.1.1",
   "sidebar_banner": {
@@ -18,7 +19,7 @@
     "enabled": true
   },
   "update": {
-    "latest_version": "1.2.2",
+    "latest_version": "1.2.3",
     "download_url": "https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe",
     "changelog": "What's new in 1.2.2:\n- Auto-update testing\n- License page: added How to Buy guide\n- Bug fixes & improvements",
     "force_update": false
