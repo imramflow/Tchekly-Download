@@ -471,13 +471,13 @@ footer .social a:hover{color:var(--cyan)}
     <a href="#guide">Guide</a>
     <a href="#faq">FAQ</a>
     <a href="#changelog">Updates</a>
-    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-btn" onclick="trackDownload()"><i class="fas fa-download"></i> Download</a>
+    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-btn" onclick="return trackDownload(event, this)"><i class="fas fa-download"></i> Download</a>
   </div>
 </nav>
 
 <!-- ══════ HERO ══════ -->
 <section class="hero">
-  <div class="hero-badge"><i class="fas fa-bolt"></i> v1.1.1 — Latest Build</div>
+  <div class="hero-badge"><i class="fas fa-bolt"></i> v1.2.1 — Latest Build</div>
   <h1><span class="grad">Tchekly</span></h1>
   <p class="tagline">Professional email validation &amp; intelligence tool for Windows &amp; Android.</p>
   <p class="sub-text">Native desktop app · Android APK · Dark UI · Multi-threaded · Proxy-ready</p>
@@ -490,10 +490,10 @@ footer .social a:hover{color:var(--cyan)}
     <span><i class="fas fa-brain"></i> Profile Intel</span>
   </div>
   <div class="hero-actions">
-    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-main" onclick="trackDownload()">
+    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe" class="dl-main" onclick="return trackDownload(event, this)">
       <i class="fab fa-windows"></i> Download for Windows
     </a>
-    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/Tchekly.apk" class="dl-secondary" onclick="trackDownloadAPK()">
+    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/Tchekly.apk" class="dl-secondary" onclick="return trackDownloadAPK(event, this)">
       <i class="fab fa-android"></i> Download for Android
     </a>
     <a href="https://t.me/tcheklyy" target="_blank" class="dl-secondary">
@@ -524,7 +524,7 @@ footer .social a:hover{color:var(--cyan)}
     <div class="stat-label">Protocol</div>
   </div>
   <div class="stat">
-    <div class="stat-num">v1.1.1</div>
+    <div class="stat-num">v1.2.1</div>
     <div class="stat-label">Latest Version</div>
   </div>
 </div>
@@ -735,6 +735,12 @@ footer .social a:hover{color:var(--cyan)}
     <p>Latest updates and improvements</p>
   </div>
   <div class="cl-item card reveal">
+    <span class="cl-badge">v1.2.1</span>
+    <div class="cl-body">
+      <strong>One-click auto-update + force update + download tracking fix</strong> — Auto-update with force overlay. Android APK links open in system browser. Download counter now tracks correctly via beacon.
+    </div>
+  </div>
+  <div class="cl-item card reveal">
     <span class="cl-badge">v1.1.1</span>
     <div class="cl-body">
       <strong>Android support + update toast</strong> — Now available for Android 8+ devices. Changed update banner to toast notification. Added GoatCounter download tracking.
@@ -799,12 +805,18 @@ footer .social a:hover{color:var(--cyan)}
 
 <script>
 /* ─── Download Tracking ─── */
-function trackDownload(){
-  if(window.goatcounter) goatcounter.count({path:'/download',title:'Download .exe'});
+function trackDownload(e, el){
+  if(e) e.preventDefault();
+  if(window.goatcounter) goatcounter.count({path:'/download',title:'Download .exe',event:true});
+  setTimeout(function(){ window.location.href = el.href; }, 400);
+  return false;
 }
 
-function trackDownloadAPK(){
-  if(window.goatcounter) goatcounter.count({path:'/download-apk',title:'Download .apk'});
+function trackDownloadAPK(e, el){
+  if(e) e.preventDefault();
+  if(window.goatcounter) goatcounter.count({path:'/download-apk',title:'Download .apk',event:true});
+  setTimeout(function(){ window.location.href = el.href; }, 400);
+  return false;
 }
 
 /* ─── Download Count ─── */
@@ -812,23 +824,30 @@ function trackDownloadAPK(){
   var dlEl=document.getElementById('downloadCount');
   var totalEl=document.getElementById('totalCount');
   if(!dlEl)return;
+  dlEl.textContent='...';
+  if(totalEl) totalEl.textContent='...';
+
   fetch('https://ramflow.goatcounter.com/api/v0/stats/hits',{
     headers:{'Authorization':'Bearer dgiy9r7c4y9c1fqnorsan6ptp1vmuvfjjkc1g8smqd2j54lwvp'}
   })
-  .then(function(r){return r.json()})
-  .then(function(data){
-    var total=0;
-    for(var i=0;i<data.length;i++){
-      if(data[i].path==='/download'){
-        dlEl.textContent=data[i].count||0;
-        total+=data[i].count||0;
-      }else if(data[i].path&&data[i].path!=='/download'){
-        total+=data[i].count||0;
-      }
-    }
-    if(totalEl)totalEl.textContent=total;
+  .then(function(r){
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return r.json();
   })
-  .catch(function(){});
+  .then(function(data){
+    var total=0, dlCount=0;
+    for(var i=0;i<data.length;i++){
+      if(data[i].path==='/download'){ dlCount=data[i].count||0; total+=dlCount; }
+      else if(data[i].path==='/download-apk') total+=data[i].count||0;
+      else if(data[i].count) total+=data[i].count;
+    }
+    dlEl.textContent=dlCount;
+    if(totalEl) totalEl.textContent=total;
+  })
+  .catch(function(){
+    dlEl.textContent='?';
+    if(totalEl) totalEl.textContent='?';
+  });
 })();
 
 /* ─── Mobile Toggle ─── */
