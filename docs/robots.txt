@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://imramflow.github.io/Tchekly-Download/sitemap.xml
