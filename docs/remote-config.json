@@ -19,10 +19,10 @@
     "enabled": true
   },
   "update": {
-    "latest_version": "1.2.3",
+    "latest_version": "1.2.4",
     "download_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe",
     "download_apk_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/Tchekly.apk",
-    "changelog": "What's new in 1.2.3:\n- WhatsApp support added (header, footer, license)\n- New analytics dashboard with live stats\n- Bug fixes & improvements",
+    "changelog": "What's new in 1.2.4:\n- Android: Pull-to-refresh disabled\n- Android: Pinch-to-zoom disabled\n- Android: Overscroll glow removed\n- GitHub Actions: Automatic APK builds\n- Bug fixes & improvements",
     "force_update": false
   },
   "licensing": {
