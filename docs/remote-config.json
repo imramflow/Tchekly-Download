@@ -1,35 +1,34 @@
 {
-  "telegram_url": "https://t.me/tcheklyy",
-  "whatsapp_url": "https://wa.me/213652731464",
-  "announcement": "",
-  "app_version": "1.1.1",
-  "sidebar_banner": {
-    "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
-    "image": "/static/melbetbanner.png",
-    "enabled": true
-  },
-  "header_banner": {
-    "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
-    "image": "/static/melbetbanner.png",
-    "enabled": true
-  },
-  "footer_banner": {
-    "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
-    "image": "/static/melbetbanner.png",
-    "enabled": true
-  },
-  "update": {
-    "latest_version": "1.2.4",
-    "download_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe",
-    "download_apk_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/Tchekly.apk",
-    "changelog": "What's new in 1.2.4:\n- Android: Pull-to-refresh disabled\n- Android: Pinch-to-zoom disabled\n- Android: Overscroll glow removed\n- Update notification: Direct APK download on Android\n- GitHub Actions: Automatic APK builds\n- Bug fixes & improvements",
-    "force_update": false
-  },
-  "licensing": {
-    "nowpayments_api_key": "RJ6VA6Y-5ZQ45XF-PJXR952-BNFP5W6",
-    "usdt_wallet": "0xBE94194adf878E014ca6BF669d334FB10FC6876b",
-    "trial_days": 3,
-    "license_price_usd": 8,
-    "license_duration_days": 30
-  }
+    "telegram_url": "https://t.me/tcheklyy",
+    "whatsapp_url": "https://wa.me/213652731464",
+    "announcement": "",
+    "sidebar_banner": {
+        "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
+        "image": "/static/melbetbanner.png",
+        "enabled": true
+    },
+    "header_banner":{
+        "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
+        "image": "/static/melbetbanner.png",
+        "enabled": true
+    },
+    "footer_banner":{
+        "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
+        "image": "/static/melbetbanner.png",
+        "enabled": true
+    },
+    "update": {
+        "latest_version": "1.2.5",
+        "download_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe",
+        "download_apk_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/Tchekly.apk",
+        "changelog": "What's new in 1.2.5:\n- Update notification: Direct APK download via system download manager\n- Fixed APK download link on download page",
+        "force_update": false
+    },
+    "licensing": {
+        "nowpayments_api_key": "RJ6VA6Y-MZQ45XF-PJXR952-BNFP5W6",
+        "usdt_wallet": "0xBE94194adf878E014ca6BF669d334FB10FC6876b",
+        "trial_days": 3,
+        "license_price_usd": 8,
+        "license_duration_days": 30
+    }
 }
