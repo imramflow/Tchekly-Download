@@ -2,17 +2,18 @@
     "telegram_url": "https://t.me/tcheklyy",
     "whatsapp_url": "https://wa.me/213652731464",
     "announcement": "",
+    "app_version": "1.1.1",
     "sidebar_banner": {
         "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
         "image": "/static/melbetbanner.png",
         "enabled": true
     },
-    "header_banner":{
+    "header_banner": {
         "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
         "image": "/static/melbetbanner.png",
         "enabled": true
     },
-    "footer_banner":{
+    "footer_banner": {
         "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
         "image": "/static/melbetbanner.png",
         "enabled": true
@@ -20,8 +21,8 @@
     "update": {
         "latest_version": "1.2.5",
         "download_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe",
-        "download_apk_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/Tchekly.apk",
-        "changelog": "What's new in 1.2.5:\n- Update notification: Direct APK download via system download manager\n- Fixed APK download link on download page",
+        "download_apk_url": "https://imramflow.github.io/Tchekly-Download/download/Tchekly.apk",
+        "changelog": "What's new in 1.2.5:\n- Fixed APK download from update notification (uses GitHub Pages direct link)",
         "force_update": false
     },
     "licensing": {
