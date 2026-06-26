@@ -13,12 +13,18 @@
 
 ## 📥 Download
 
-| Version | Link | Size |
-|---------|------|------|
-| **Windows** | [⬇️ Download tchekly.exe](https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe) | ~50 MB |
-| **Android** | [⬇️ Download Tchekly.apk](https://github.com/imramflow/Tchekly-Download/raw/main/download/Tchekly.apk) | ~48 MB |
+| Version | Link | Size | SHA-256 Checksum |
+|---------|------|------|------------------|
+| **Windows** | [⬇️ Download tchekly.exe](https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe) | ~26 MB | `6d3e87845b061642fc2df826fc4832a4d98ce528893c14be920393f7fd0de345` |
+| **Android** | [⬇️ Download Tchekly.apk](https://github.com/imramflow/Tchekly-Download/releases/latest/download/Tchekly.apk) | ~48 MB | `e6170dbd3dfb8dbf82f0a550f706e553fd7723f157cc303c146d3f479a86625d` |
 
-> 💡 **Note:** Windows might show SmartScreen warning — click **"More info" → "Run anyway"**. This is normal for unsigned apps.
+> 💡 **Verification:** After downloading, verify the file with:
+> - **Windows:** `certutil -hashfile tchekly.exe SHA256`
+> - **Android/Linux:** `sha256sum Tchekly.apk`
+> 
+> Compare the output with the checksum above. If they match, the file is intact.
+> 
+> ⚠️ **Note:** Windows might show SmartScreen warning for unsigned apps — this is normal. Verify the SHA-256 checksum above before running, then click **"More info" → "Run anyway"**.
 
 ### System Requirements
 
