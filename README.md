@@ -163,7 +163,7 @@ A: Tchekly runs on Windows 10/11 (64-bit) and **Android 8+**. Linux and Mac are 
 A: Some features work offline (cleaning lists, formatting). Email checking requires internet.
 
 **Q: Why does SmartScreen block the .exe?**
-A: The app is not code-signed. Click **"More info" → "Run anyway"** — it's safe.
+A: The app is not code-signed. Verify the SHA-256 checksum from the download table, then click **"More info" → "Run anyway"**.
 
 **Q: How do I update?**
 A: Just download the latest `.exe` and replace your old one. Your license and config are preserved.
@@ -201,8 +201,8 @@ A: Yes, but they share the same results folder.
   <br>
   <p>
     <a href="https://imramflow.github.io/Tchekly-Download/"><img src="https://img.shields.io/badge/Website-Visit-00d4ff?logo=github-pages&logoColor=white"></a>
-    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/tchekly.exe"><img src="https://img.shields.io/badge/Download-.exe-22c55e?logo=windows&logoColor=white"></a>
-    <a href="https://github.com/imramflow/Tchekly-Download/raw/main/download/Tchekly.apk"><img src="https://img.shields.io/badge/Download-.apk-22c55e?logo=android&logoColor=white"></a>
+    <a href="https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe"><img src="https://img.shields.io/badge/Download-.exe-22c55e?logo=windows&logoColor=white"></a>
+    <a href="https://github.com/imramflow/Tchekly-Download/releases/latest/download/Tchekly.apk"><img src="https://img.shields.io/badge/Download-.apk-22c55e?logo=android&logoColor=white"></a>
   </p>
   <br>
 </div>
