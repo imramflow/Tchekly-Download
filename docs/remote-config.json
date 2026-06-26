@@ -22,13 +22,13 @@
         "latest_version": "1.2.5",
         "download_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe",
         "download_apk_url": "https://imramflow.github.io/Tchekly-Download/download/Tchekly.apk",
-        "changelog": "What's new in 1.2.5:\n- Fixed: NOWPayments payment processing\n- Fixed: External links open in system browser on Android\n- Security: API key removed from public config\n- Added: SHA-256 checksums for download verification",
+        "changelog": "What's new in 1.2.5:\n- Fixed: NOWPayments payment processing\n- Fixed: External links open in system browser on Android\n- Security: API key removed from public config\n- Added: SHA-256 checksums for download verification\n- Changed: License model — one-time $18 lifetime purchase (no more monthly subscription)",
         "force_update": false
     },
     "licensing": {
         "usdt_wallet": "0xBE94194adf878E014ca6BF669d334FB10FC6876b",
         "trial_days": 3,
-        "license_price_usd": 8,
-        "license_duration_days": 30
+        "license_price_usd": 18,
+        "license_duration_days": 36525
     }
 }
