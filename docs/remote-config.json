@@ -26,7 +26,6 @@
         "force_update": false
     },
     "licensing": {
-        "nowpayments_api_key": "RJ6VA6Y-MZQ45XF-PJXR952-BNFP5W6",
         "usdt_wallet": "0xBE94194adf878E014ca6BF669d334FB10FC6876b",
         "trial_days": 3,
         "license_price_usd": 8,
