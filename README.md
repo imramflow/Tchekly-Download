@@ -5,6 +5,7 @@
   <p align="center">
     <a href="#-download"><img src="https://img.shields.io/badge/Download-Latest%20Build-00d4ff?style=for-the-badge&logo=windows&logoColor=white"></a>
     <a href="#-features"><img src="https://img.shields.io/badge/Features-Overview-a78bfa?style=for-the-badge"></a>
+    <a href="https://github.com/imramflow/Tchekly-Download/releases/latest/download/Tchekly.apk"><img src="https://img.shields.io/badge/Android-APK-22c55e?style=for-the-badge&logo=android&logoColor=white"></a>
   </p>
   <br>
 </div>
@@ -41,14 +42,18 @@
 |---------|-------------|
 | **Email Validation** | Check IMAP credentials with proxy support (SOCKS4/5, HTTP) |
 | **Bulk Checker** | Validate thousands of emails with multi-threading + pause/resume/stop |
-| **Read Emails** | Preview last 10 emails from any inbox |
-| **DOB Detection** | Extract date of birth from email headers & content |
-| **Profile Intel** | Extract name, phone, address, social accounts, financial data |
+| **Platform Hunter** | Check if email is registered on 6 platforms — Amazon, Dropbox, Microsoft, Netflix, Spotify, Twitter/X |
+| **Profile Intel** | Extract name, phone, address, social accounts, financial data from any inbox |
+| **Read Emails** | Preview last 10 emails from any folder with full body content |
+| **DOB Detection** | Extract date of birth from email headers & content (10+ languages) |
+| **Vault Manager** | Save & organize validated accounts securely |
+| **Keyword Search** | Search inbox for specific keywords + auto-save matches |
 | **SMTP Detect** | Auto-detect SMTP settings per email domain |
-| **Keyword Search** | Search inbox for specific keywords + save matches |
-| **Free Proxy Fetcher** | Built-in tool to fetch free proxies from 20+ sources |
-| **Pro Settings** | Configurable performance, filters, network, notifications & security |
-| **Dark Desktop UI** | Native frameless window with custom titlebar, glass effects |
+| **Free Proxy Fetcher** | Built-in tool to fetch working proxies from 20+ sources |
+| **Sound & Alerts** | Audio cues + desktop notifications on valid hits |
+| **Pro Settings** | Configurable workers, timeouts, domain filters, auto-save & more |
+| **Modern Top-Nav UI** | Clean dark desktop UI with top navigation, hover dropdowns & mobile slide menu |
+| **Android APK** | Native Android app with bottom nav, slide menu & full feature set |
 
 
 ## 🚀 Quick Start Guide
@@ -63,7 +68,7 @@
 ### 📧 How to Check Emails
 
 ```
-Step 1: Click "Check Emails" from the sidebar
+Step 1: Click "Check Emails" from the top navigation
 Step 2: Upload a .txt file with emails (format: email:password, one per line)
 Step 3: (Optional) Upload a proxy list or use auto-fetch
 Step 4: (Optional) Enter keywords to search inside inboxes
@@ -77,7 +82,7 @@ Results save automatically to:
 ### 📨 How to Read Emails
 
 ```
-Step 1: Click "Read Email" from the sidebar
+Step 1: Click "Read Email" from the top navigation
 Step 2: Enter email:password
 Step 3: (Optional) Add a proxy
 Step 4: Click "Read"
@@ -87,7 +92,7 @@ Step 5: Browse the last 10 emails in the built-in email reader
 ### 🧠 How to Use Profile Intel
 
 ```
-Step 1: Click "Profile Intel" from the sidebar
+Step 1: Click "Profile Intel" from the top navigation
 Step 2: Enter email:password
 Step 3: (Optional) Add a proxy
 Step 4: Click "Extract Intelligence"
@@ -95,12 +100,22 @@ Step 5: View extracted data: name, phone, address, accounts, social links
          → Full report saved in results/intel/
 ```
 
+### 🎯 How to Check Platforms
+
+```
+Step 1: Click "Hunter" from the top navigation
+Step 2: Upload a .txt file with emails (email:password per line)
+Step 3: (Optional) Add proxies
+Step 4: Click "Start"
+Step 5: View results — registered platforms for each email
+```
+
 ### 🔑 License
 
 | Period | Price | Payment |
 |--------|-------|---------|
 | Trial | **Free** — 3 days | Automatic on first run |
-| License | **$8 USDT/month** | NOWPayments (USDT BSC/BEP20) |
+| Lifetime | **$18 USDT** (one-time) | NOWPayments (USDT BSC/BEP20) |
 
 Buy/Renew from the **License** page inside the app.
 
@@ -137,6 +152,7 @@ All results are saved in the `results/` folder (next to the .exe):
 | `results/good_emails/valid_emails.txt` | ✅ Valid email:password pairs |
 | `results/keyword_matches/matches.txt` | 🔍 Emails matching your keywords |
 | `results/intel/*.txt` | 🧠 Full intelligence reports |
+| `results/platforms/` | 🎯 Platform check results per email |
 | `results/.secret_key` | 🔐 Auto-generated Flask secret key |
 
 > 🔒 All result files: permission `600` (owner read/write only)
