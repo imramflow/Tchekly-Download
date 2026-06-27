@@ -2,17 +2,17 @@
     "telegram_url": "https://t.me/tcheklyy",
     "whatsapp_url": "https://wa.me/213652731464",
     "announcement": "",
-    "app_version": "1.3.1",
+    "app_version": "1.3.2",
     "footer_banner": {
         "url": "https://url.hk/i/en/9hdk3",
         "image": "/static/redotpay.webp",
         "enabled": true
     },
     "update": {
-        "latest_version": "1.3.1",
+        "latest_version": "1.3.2",
         "download_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe",
         "download_apk_url": "https://imramflow.github.io/Tchekly-Download/download/Tchekly.apk",
-        "changelog": "What's new in 1.3.1:\n- Removed: Verification Scanner feature (deprecated)\n- Removed: Platform Hunter from Email Checker page (kept in dedicated page)\n- Changed: Load Email now fetches last 10 by default + Load All toggle\n- Added: Microsoft sub-service breakdown (Outlook, Xbox, OneDrive, Skype, Office 365, Teams)\n- Fixed: Platform Hunter scroll-intoView removed (user controls scroll)\n- Cleaned: Dead code removed from check.html, style.css, events.py",
+        "changelog": "What's new in 1.3.2:\n- Added: 5 new platforms in Platform Hunter — Adobe, Flickr, Last.fm, XNXX, XVideos (11 total)\n- Fixed: \"No Internet Connection\" false alert on Windows startup (cached remote-config + threaded fetch)\n- Fixed: Slow app startup on no-internet connection (remote config now loads from cache first)\n- Improved: Mobile-friendly platform cards + stats-mini layout for small screens\n- Refactored: Platform Hunter JS now data-driven (easier to add future platforms)",
         "force_update": false
     },
     "licensing": {
