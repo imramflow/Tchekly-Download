@@ -2,27 +2,17 @@
     "telegram_url": "https://t.me/tcheklyy",
     "whatsapp_url": "https://wa.me/213652731464",
     "announcement": "",
-    "app_version": "1.1.1",
-    "sidebar_banner": {
-        "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
-        "image": "/static/melbetbanner.png",
-        "enabled": true
-    },
-    "header_banner": {
-        "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
-        "image": "/static/melbetbanner.png",
-        "enabled": true
-    },
+    "app_version": "1.3.0",
     "footer_banner": {
-        "url": "https://melbet-49771.bar?bf=365f8f7812d44_14066321455",
-        "image": "/static/melbetbanner.png",
+        "url": "https://url.hk/i/en/9hdk3",
+        "image": "/static/redotpay.webp",
         "enabled": true
     },
     "update": {
-        "latest_version": "1.2.6",
+        "latest_version": "1.3.0",
         "download_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe",
         "download_apk_url": "https://imramflow.github.io/Tchekly-Download/download/Tchekly.apk",
-        "changelog": "What's new in 1.2.6:\n- Changed: License model — one-time $18 lifetime purchase (no more monthly subscription)\n- Added: App version visible in footer (v1.2.6)\n- Added: What You Get card + Lifetime badge on License page\n- Fixed: CLI \"Buy license\" message now shows $18 Lifetime\n- Fixed: Dashboard \"Manage trial & subscription\" → \"Manage trial & license\"\n- Security: API key removed from local remote-config.json",
+        "changelog": "What's new in 1.3.0:\n- Added: RedotPay sponsored banners (footer, dashboard, mobile menu)\n- Improved: Banner design — CSS-styled (no more heavy images)\n- Removed: Old Melbet banners & image files\n- Improved: Dashboard with new RedotPay card\n- Fixed: External banners not showing due to config overwrite\n- Changed: New top navigation bar with hover dropdowns (replaced old sidebar)\n- Fixed: Page scrolling behavior (body handles scrolling, no more flex issues)\n- Improved: Mobile menu slide-in from left with smooth animation\n- Cleaned: Dead code and legacy backward-compat config removed",
         "force_update": false
     },
     "licensing": {
