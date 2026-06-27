@@ -2,17 +2,17 @@
     "telegram_url": "https://t.me/tcheklyy",
     "whatsapp_url": "https://wa.me/213652731464",
     "announcement": "",
-    "app_version": "1.3.0",
+    "app_version": "1.3.1",
     "footer_banner": {
         "url": "https://url.hk/i/en/9hdk3",
         "image": "/static/redotpay.webp",
         "enabled": true
     },
     "update": {
-        "latest_version": "1.3.0",
+        "latest_version": "1.3.1",
         "download_url": "https://github.com/imramflow/Tchekly-Download/releases/latest/download/tchekly.exe",
         "download_apk_url": "https://imramflow.github.io/Tchekly-Download/download/Tchekly.apk",
-        "changelog": "What's new in 1.3.0:\n- Added: RedotPay sponsored banners (footer, dashboard, mobile menu)\n- Improved: Banner design — CSS-styled (no more heavy images)\n- Removed: Old Melbet banners & image files\n- Improved: Dashboard with new RedotPay card\n- Fixed: External banners not showing due to config overwrite\n- Changed: New top navigation bar with hover dropdowns (replaced old sidebar)\n- Fixed: Page scrolling behavior (body handles scrolling, no more flex issues)\n- Improved: Mobile menu slide-in from left with smooth animation\n- Cleaned: Dead code and legacy backward-compat config removed",
+        "changelog": "What's new in 1.3.1:\n- Removed: Verification Scanner feature (deprecated)\n- Removed: Platform Hunter from Email Checker page (kept in dedicated page)\n- Changed: Load Email now fetches last 10 by default + Load All toggle\n- Added: Microsoft sub-service breakdown (Outlook, Xbox, OneDrive, Skype, Office 365, Teams)\n- Fixed: Platform Hunter scroll-intoView removed (user controls scroll)\n- Cleaned: Dead code removed from check.html, style.css, events.py",
         "force_update": false
     },
     "licensing": {
